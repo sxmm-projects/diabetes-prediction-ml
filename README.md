@@ -46,59 +46,81 @@ The dashboard is built with **Streamlit** and provides a **user-friendly interfa
 ---
 
 ## 📁 Project Structure
-
+```text
 Diabetes-Prediction-AI/
-├─ app.py              # Streamlit dashboard
-├─ model.py            # ML model training & evaluation
-├─ utils.py            # Helper functions for plotting & visualization
-├─ data/
-│   └─ diabetes.csv    # Dataset
-├─ requirements.txt    # Python dependencies
-└─ README.md           # Project documentation
+├── app.py              # Streamlit dashboard
+├── model.py            # ML model training & evaluation
+├── utils.py            # Helper functions for plotting & visualization
+├── data/
+│   └── diabetes.csv    # Dataset
+├── requirements.txt    # Python dependencies
+└── README.md           # Project documentation
+```
+
+---
+
+## 📸 Demo
+<img width="1903" height="862" alt="image" src="https://github.com/user-attachments/assets/accec660-0349-4fbe-aa0c-249d1ea21f56" />
 
 ---
 
 ## 🚀 Installation & Setup
 
 1. Clone the repository:
-
-```bash
-git clone https://github.com/<your-username>/Diabetes-Prediction-AI.git
-cd Diabetes-Prediction-AI
+   ```bash
+   git clone [https://github.com/](https://github.com/)<your-username>/Diabetes-Prediction-AI.git
+   cd Diabetes-Prediction-AI
 
 2. Create a virtual environment:
-conda create -n diabetes_ai python=3.10
-conda activate diabetes_ai
+   ```bash
+   conda create -n diabetes_ai python=3.10
+   conda activate diabetes_ai
 
-3. Install dependencies:
-pip install -r requirements.txt
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+---
 
 ## ⚡ Run the App
+
+```bash
 streamlit run app.py
-The dashboard will open in your browser.
-Use the sidebar to enter patient data and predict diabetes risk.
-Explore model metrics and feature importance.
+```
+- The dashboard will open in your browser.
+- Use the sidebar to enter patient data and predict diabetes risk.
+- Explore model metrics and feature importance.
 
-🧠 How It Works
-Data Loading: Reads diabetes.csv and cleans missing values.
-Data Preparation: Splits features (X) and target (y).
-Train/Test Split: 70% train, 30% test, stratified for balanced classes.
-Model Training: Random Forest Classifier with 200 trees and max depth 6.
-Evaluation: Computes accuracy, confusion matrix, and classification report.
-Prediction: Accepts user input and predicts diabetes risk in real-time.
+---
 
-📈 Visualizations
-Confusion Matrix
-Feature Importance
-Accuracy Metric
-Prediction Badge (High Risk / Low Risk)
+## 🧠 How It Works
+- Data Loading: Reads diabetes.csv and cleans missing values.
+- Data Preparation: Splits features (X) and target (y).
+- Train/Test Split: 70% train, 30% test, stratified for balanced classes.
+- Model Training: Random Forest Classifier with 200 trees and max depth 6.
+- Evaluation: Computes accuracy, confusion matrix, and classification report.
+- Prediction: Accepts user input and predicts diabetes risk in real-time.
 
-🏆 Future Improvements
-Save and load trained model to speed up predictions
-Add SHAP explanations for AI transparency
-Deploy online for public access
-Implement additional models (Logistic Regression, XGBoost)
+---
 
-👨‍💻 Author
+## 📈 Visualizations
+- Confusion Matrix
+- Feature Importance
+- Accuracy Metric
+- Prediction Badge (High Risk / Low Risk)
 
-Rungphailin Siamphupong
+---
+
+## 🏆 Future Improvements
+- Save and load trained model to speed up predictions
+- Add SHAP explanations for AI transparency
+- Deploy online for public access
+- Implement additional models (Logistic Regression, XGBoost)
+
+---
+
+## 👨‍💻 Author
+
+**Rungphailin Siamphupong**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rungphailin-siamphupong-2a32223b2)
