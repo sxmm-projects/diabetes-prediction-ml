@@ -2,89 +2,103 @@
 
 This project applies machine learning techniques to predict diabetes risk using a public diabetes dataset. The objective is to build and evaluate classification models that can identify whether a patient is likely to have diabetes based on medical attributes.
 
-## Project Overview
+# 🩺 Diabetes Prediction AI
 
-In this project, two machine learning algorithms were implemented and compared:
+[![Python](https://img.shields.io/badge/python-3.10-blue?logo=python)](https://www.python.org/) 
+[![Streamlit](https://img.shields.io/badge/streamlit-1.22-orange?logo=streamlit)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-- Random Forest Classifier
-- Decision Tree Classifier
+---
 
-The models were trained on a diabetes dataset and evaluated using standard classification metrics to assess performance.
+## 💡 Project Overview
 
-## Dataset
+This project is an interactive **Diabetes Prediction Dashboard** using **Random Forest Classifier**. It allows users to:
 
-The dataset contains medical diagnostic measurements used to predict the presence of diabetes.  
-Each row represents a patient record with features such as glucose level, BMI, age, and other health indicators.
+- Explore the dataset
+- Train a machine learning model
+- Visualize model performance
+- Input patient data and get real-time predictions
 
-Target variable:
-- **Outcome**
-  - 1 = Diabetes
-  - 0 = No Diabetes
+The dashboard is built with **Streamlit** and provides a **user-friendly interface** for both data exploration and prediction.
 
-## Machine Learning Workflow
+---
 
-The following steps were performed in the project:
+## 📊 Features
 
-1. **Data Loading**
-   - Imported the dataset using Python and Pandas.
+- **Interactive Input Sidebar:** Enter patient metrics to predict diabetes risk.
+- **Model Training:** Uses Random Forest with customizable parameters.
+- **Performance Metrics:** Accuracy, confusion matrix, classification report.
+- **Feature Importance Visualization:** See which medical indicators contribute most.
+- **Real-time Prediction:** Predict diabetes risk with visual feedback (High Risk / Low Risk).
 
-2. **Data Preprocessing**
-   - Converted categorical values to numerical values using label encoding.
-   - Handled missing values using NumPy.
+---
 
-3. **Feature Selection**
-   - Separated features (`X`) and target variable (`y`).
+## 🛠 Technologies & Libraries
 
-4. **Train-Test Split**
-   - Split the dataset into training and testing sets (60% training, 40% testing).
+- Python 3.10+
+- [pandas](https://pandas.pydata.org/)
+- [numpy](https://numpy.org/)
+- [scikit-learn](https://scikit-learn.org/stable/)
+- [matplotlib](https://matplotlib.org/)
+- [seaborn](https://seaborn.pydata.org/)
+- [streamlit](https://streamlit.io/)
 
-5. **Model Training**
-   - Implemented a Random Forest Classifier using Scikit-learn.
-   - Trained the model on the training dataset.
+---
 
-6. **Model Evaluation**
-   - Evaluated model performance using:
-     - Accuracy
-     - Confusion Matrix
-     - Precision
-     - Recall
-     - F1 Score
+## 📁 Project Structure
 
-## Results
+Diabetes-Prediction-AI/
+├─ app.py              # Streamlit dashboard
+├─ model.py            # ML model training & evaluation
+├─ utils.py            # Helper functions for plotting & visualization
+├─ data/
+│   └─ diabetes.csv    # Dataset
+├─ requirements.txt    # Python dependencies
+└─ README.md           # Project documentation
 
-Model performance results:
+---
 
-- **Train Accuracy:** 1.0  
-- **Test Accuracy:** 0.75  
+## 🚀 Installation & Setup
 
-Evaluation metrics were calculated using confusion matrix and classification report to analyze model predictions.
+1. Clone the repository:
 
-## Technologies Used
+```bash
+git clone https://github.com/<your-username>/Diabetes-Prediction-AI.git
+cd Diabetes-Prediction-AI
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Jupyter Notebook
+2. Create a virtual environment:
+conda create -n diabetes_ai python=3.10
+conda activate diabetes_ai
 
-## Project Structure
+3. Install dependencies:
+pip install -r requirements.txt
 
-    diabetes-prediction-ml
-    │
-    ├── diabetes_prediction.py
-    ├── diabetes_prediction.ipynb
-    ├── diabetes.csv
-    └── README.md
+## ⚡ Run the App
+streamlit run app.py
+The dashboard will open in your browser.
+Use the sidebar to enter patient data and predict diabetes risk.
+Explore model metrics and feature importance.
 
-## Future Improvements
+🧠 How It Works
+Data Loading: Reads diabetes.csv and cleans missing values.
+Data Preparation: Splits features (X) and target (y).
+Train/Test Split: 70% train, 30% test, stratified for balanced classes.
+Model Training: Random Forest Classifier with 200 trees and max depth 6.
+Evaluation: Computes accuracy, confusion matrix, and classification report.
+Prediction: Accepts user input and predicts diabetes risk in real-time.
 
-Possible improvements for this project include:
+📈 Visualizations
+Confusion Matrix
+Feature Importance
+Accuracy Metric
+Prediction Badge (High Risk / Low Risk)
 
-- Hyperparameter tuning for improved model performance
-- Testing additional machine learning models
-- Feature engineering to improve prediction accuracy
-- Visualization of model performance metrics
+🏆 Future Improvements
+Save and load trained model to speed up predictions
+Add SHAP explanations for AI transparency
+Deploy online for public access
+Implement additional models (Logistic Regression, XGBoost)
 
-## Author
+👨‍💻 Author
 
 Rungphailin Siamphupong
